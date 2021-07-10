@@ -1,4 +1,4 @@
-#Switcher integration using WebAPI
+# Switcher integration using WebAPI
 ## What
 This is alternative option for integration of Switcher devices in Home Assistant.  
 There are two existing components, both developed by [TomerFi](https://github.com/TomerFi) for that: 
