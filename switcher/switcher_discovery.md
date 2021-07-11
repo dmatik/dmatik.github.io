@@ -11,6 +11,9 @@ pip install aioswitcher
 python discover_devices.py 30
 ```
 
+> Make sure you are on the same network as the devices.   
+> Also make sure Windows Firewall is disables while running the discovery command.
+
 Should look like this:
 
 ![cmd](images/discovery.png)
