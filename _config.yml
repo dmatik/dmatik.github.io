@@ -11,7 +11,7 @@ include:
   - CODE_OF_CONDUCT.md
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
-remote_theme: rundocs/jekyll-rtd-theme
+remote_theme: chrisrhymes/bulma-clean-theme
 title: dmatik
 description: Smart Home Tutorials
 readme_index:
