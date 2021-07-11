@@ -39,7 +39,6 @@ switcher_webapi:
 
 ### RESTful commands
 Define RESTful commands in HA, to be used in scripts.  
-> Change to your IP and port below.
 
 {% raw %}
 ```YAML
@@ -62,7 +61,7 @@ rest_command:
 
 ### Sensors
 Define RESTful Sensor and other Template sensors depending on it in HA.  
-> Change to your IP and port below.
+> Change to your WebAPI IP, Device ID, Switcher IP and port below.
 
 {% raw %}
 ```YAML
