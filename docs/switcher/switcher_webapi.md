@@ -224,4 +224,4 @@ switch:
 
 ## UI
 This is it. All that is left to define a nice UI and use all the above entities.
-But this is for another guide.
+But this is for another [guide](switcher_ha_lovelace.md).
