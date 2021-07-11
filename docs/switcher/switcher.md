@@ -10,3 +10,5 @@ permalink: /docs/switcher
 
 Switcher tutorials
 {: .fs-6 .fw-300 }
+
+![cmd](images/switcher.png)
