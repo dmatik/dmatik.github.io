@@ -13,8 +13,7 @@ include:
   - PULL_REQUEST_TEMPLATE.md
 #remote_theme: chrisrhymes/bulma-clean-theme
 #remote_theme: aterenin/minima-reboot
-theme: minima
+remote_theme: pmarsceill/just-the-docs
+#theme: minima
 title: dmatik
 description: Smart Home Tutorials
-header_pages:
-  - about.md
