@@ -16,7 +16,5 @@ include:
 theme: minima
 title: dmatik
 description: Smart Home Tutorials
-readme_index:
-  with_frontmatter: false
 header_pages:
   - about.md
