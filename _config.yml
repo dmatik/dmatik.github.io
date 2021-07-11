@@ -14,3 +14,5 @@ include:
 remote_theme: rundocs/jekyll-rtd-theme
 title: dmatik
 description: Smart Home Tutorials
+readme_index:
+  with_frontmatter: false
