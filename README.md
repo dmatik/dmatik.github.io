@@ -6,5 +6,6 @@ description: "Smart Home Tutorials"
 permalink: /
 ---
 
-# Smart Home Tutorials
+# Tutorials
+Smart Home Tutorials
 
