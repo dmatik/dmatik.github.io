@@ -1,4 +1,3 @@
-# Switcher
 
 - [Discover Switcher Devices Info](switcher/switcher_discovery.md)
 - Switcher HA embedded intergation (Soon).
