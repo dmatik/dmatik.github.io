@@ -41,6 +41,7 @@ switcher_webapi:
 Define RESTful commands in HA, to be used in scripts.  
 > Change to your IP and port below.
 
+{% raw %}
 ```YAML
 rest_command:
 
@@ -57,6 +58,7 @@ rest_command:
     url: http://{{switcher_web_api_ip}}:{{switcher_web_api_port}}/switcher/turn_off?id={{switcher_device_id}}&ip={{switcher_ip}}
     method: "POST"
 ```
+{% endraw %}
 
 ### Sensors
 Define RESTful Sensor and other Template sensors depending on it in HA.  
