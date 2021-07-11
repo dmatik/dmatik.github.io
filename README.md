@@ -1,3 +1,11 @@
+---
+layout: default
+title: Home
+nav_order: 1
+description: "Home"
+permalink: /
+---
+
 # Switcher
 
 - [Discover Switcher Devices Info](switcher/switcher_discovery.md)
