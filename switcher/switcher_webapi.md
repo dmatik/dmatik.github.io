@@ -62,6 +62,7 @@ rest_command:
 Define RESTful Sensor and other Template sensors depending on it in HA.  
 > Change to your IP and port below.
 
+{% raw %}
 ```YAML
 sensor:
       - platform: rest
@@ -128,3 +129,4 @@ sensor:
                   off
                {% endif %}
 ```
+{% endraw %}
