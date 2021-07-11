@@ -11,6 +11,19 @@ include:
   - CODE_OF_CONDUCT.md
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
-theme: jekyll-theme-cayman
+#remote_theme: chrisrhymes/bulma-clean-theme
+#remote_theme: aterenin/minima-reboot
+remote_theme: pmarsceill/just-the-docs
+#theme: minima
 title: dmatik
 description: Smart Home Tutorials
+collections:
+  switcher:
+    permalink: "./switcher/"
+    output: true
+just_the_docs:
+  collections:
+    switcher:
+      name: Switcher
+      nav_exclude: false
+      search_exclude: false

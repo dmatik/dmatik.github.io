@@ -39,8 +39,8 @@ switcher_webapi:
 
 ### RESTful commands
 Define RESTful commands in HA, to be used in scripts.  
-> Change to your IP and port below.
 
+{% raw %}
 ```YAML
 rest_command:
 
@@ -57,11 +57,13 @@ rest_command:
     url: http://{{switcher_web_api_ip}}:{{switcher_web_api_port}}/switcher/turn_off?id={{switcher_device_id}}&ip={{switcher_ip}}
     method: "POST"
 ```
+{% endraw %}
 
 ### Sensors
 Define RESTful Sensor and other Template sensors depending on it in HA.  
-> Change to your IP and port below.
+> Change to your WebAPI IP, Device ID, Switcher IP and port below.
 
+{% raw %}
 ```YAML
 sensor:
       - platform: rest
@@ -128,3 +130,91 @@ sensor:
                   off
                {% endif %}
 ```
+{% endraw %}
+
+### Input Select
+Define Input Select in HA, to select the timings for the Turn On with timer script.
+
+```YAML
+input_select:
+      switcher_timer_minutes_input_select:
+          name: Timer minutes
+          options:
+              - 15
+              - 30
+              - 45
+              - 60
+```
+
+### Scripts
+Define scripts in HA for turning on the Switcher, with and without timers, and turning it off.
+
+{% raw %}
+```YAML
+script:
+      switcher_turn_on_timer_script:
+          alias: On with Timer
+          sequence:
+              - service: rest_command.switcher_turn_on_timer
+                data_template:
+                  switcher_web_api_ip: <<WEB_API_IP>>
+                  switcher_web_api_port: 8000
+                  switcher_device_id: <<DEVICE_ID>>
+                  switcher_ip: <<SWITCHER_IP>>
+                  minutes: '{{ states("input_select.switcher_timer_minutes_input_select") }}'
+              - service: homeassistant.update_entity
+                entity_id: sensor.switcher_webapi
+
+      switcher_turn_on:
+          alias: Turn On
+          sequence:
+              - service: rest_command.switcher_turn_on
+                data_template:
+                  switcher_web_api_ip: <<WEB_API_IP>>
+                  switcher_web_api_port: 8000
+                  switcher_device_id: <<DEVICE_ID>>
+                  switcher_ip: <<SWITCHER_IP>>
+              - service: homeassistant.update_entity
+                entity_id: sensor.switcher_webapi
+
+      switcher_turn_off:
+          alias: Turn Off
+          sequence:
+              - service: rest_command.switcher_turn_off
+                data_template:
+                  switcher_web_api_ip: <<WEB_API_IP>>
+                  switcher_web_api_port: 8000
+                  switcher_device_id: <<DEVICE_ID>>
+                  switcher_ip: <<SWITCHER_IP>>
+              - service: homeassistant.update_entity
+                entity_id: sensor.switcher_webapi
+```
+{% endraw %}
+
+### Switch
+Define Switch in HA, which uses the sensor and scripts we defined before.
+
+{% raw %}
+```YAML
+switch:
+      - platform: template
+        switches:
+
+          switcher_webapi:
+              friendly_name: Boiler
+              icon_template: mdi:shower
+              value_template: "{{ is_state('sensor.switcher_webapi_state', 'on') }}"
+              turn_on:
+                  service: script.turn_on
+                  data:
+                    entity_id: script.switcher_turn_on
+              turn_off:
+                  service: script.turn_on
+                  data:
+                    entity_id: script.switcher_turn_off
+```
+{% endraw %}
+
+## UI
+This is it. All that is left to define a nice UI and use all the above entities.
+But this is for another guide.
