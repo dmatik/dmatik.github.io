@@ -8,4 +8,4 @@ permalink: /
 
 # Tutorials
 Smart Home Tutorials
-
+{: .fs-6 .fw-300 }
