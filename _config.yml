@@ -20,7 +20,7 @@ remote_theme: pmarsceill/just-the-docs
 title: dmatik
 description: Smart Home Tutorials
 
-baseurl: "/"
+baseurl: ""
 url: "https://dmatik.github.io/"
 
 permalink: pretty
