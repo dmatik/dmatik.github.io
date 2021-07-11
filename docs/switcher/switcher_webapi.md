@@ -1,11 +1,11 @@
 ---
 layout: default
-title: WebAPI HA integration
+title: WebAPI HA Integration
 parent: Switcher
 nav_order: 2
 ---
 
-# WebAPI HA integration
+# WebAPI HA Integration
 
 ## What
 This is alternative option for integration of Switcher devices in Home Assistant.  
