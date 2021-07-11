@@ -12,6 +12,9 @@ python discover_devices.py 30
 ```
 
 Should look like this:
+
+![cmd](switcher/images/discovery.png)
+
 ```
 C:\Downloads\HA\aioswitcher-dev\scripts>python discover_devices.py 5
 {   'auto_shutdown': '03:00:00',
