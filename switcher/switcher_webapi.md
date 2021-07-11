@@ -1,4 +1,4 @@
-# Switcher integration using WebAPI
+# Switcher HA integration using WebAPI
 
 ## What
 This is alternative option for integration of Switcher devices in Home Assistant.  
