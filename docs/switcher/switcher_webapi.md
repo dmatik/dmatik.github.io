@@ -1,3 +1,11 @@
+---
+layout: default
+title: Switcher HA integration using WebAPI
+nav_order: 2
+has_children: false
+permalink: /docs/switcher
+---
+
 # Switcher HA integration using WebAPI
 
 ## What
