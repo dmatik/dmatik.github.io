@@ -1,3 +1,11 @@
+---
+layout: default
+title: Discover Switcher Devices Info
+nav_order: 1
+has_children: false
+permalink: /docs/switcher
+---
+
 # Discover Switcher Devices Info
 
 1. Install latest Python (Currently 3.9).
