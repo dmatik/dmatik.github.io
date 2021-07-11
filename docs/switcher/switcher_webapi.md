@@ -17,9 +17,9 @@ In this solution we will be using [**Switcher WebAPI**](https://github.com/Tomer
 
 ## Prerequisites
 * Install and configure your Switcher device.
-* Collect the following information from the device’s (Use [this](switcher_discovery.md) to retrieve the device_id):
-  * ip_address
-  * device_id
+* Collect the following information from all the Switcher device’s (Use [this](switcher_discovery.md) to retrieve the device_id):
+  * IP addresses
+  * Device IDs
 * Install docker (preferably with docker-compose)
 
 ## How
