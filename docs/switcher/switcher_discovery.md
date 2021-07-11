@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Discover Switcher Devices Info
+title: Switcher Discovery
 nav_order: 2
 has_children: false
 ---
 
-# Discover Switcher Devices Info
+# Switcher Discovery
 
 1. Install latest Python (Currently 3.9).
 2. Install "aioswitcher" module with the below command.
