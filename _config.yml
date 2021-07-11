@@ -19,7 +19,7 @@ title: dmatik
 description: Smart Home Tutorials
 collections:
   switcher:
-    permalink: "/switcher/"
+    permalink: "./switcher/"
     output: true
 just_the_docs:
   collections:
