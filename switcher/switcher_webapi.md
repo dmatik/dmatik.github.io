@@ -10,10 +10,30 @@ In this solution we will be using [**Switcher WebAPI**](https://github.com/Tomer
 
 ## Prerequisites
 * Install and configure your Switcher device.
-* Collect the following information from the device’s (Use this [script](https://github.com/TomerFi/aioswitcher/blob/dev/scripts/discover_devices.py) to retrieve the device_id, more on this below):
+* Collect the following information from the device’s (Use [this](switcher_discovery.md) to retrieve the device_id):
   * ip_address
   * device_id
 * Install docker (preferably with docker-compose)
 
 ## How
 
+### WebAPI container
+Setup Switcher WebAPI container in docker using its the [documentation](https://switcher-webapi.tomfi.info).  
+This is example of working Docker Compose (change to your values):
+
+```YAML
+
+switcher_webapi:
+  image: tomerfi/switcher_webapi:latest
+  container_name: switcher_webapi
+  hostname: switcher_webapi
+  restart: always
+  network_mode: bridge
+  ports:
+    - 8000:8000
+  environment:
+    TZ: "Asia/Jerusalem" 
+```
+
+> If you are using ARM system, like PRI, please use the below image.    
+> [https://hub.docker.com/r/avishayil/switcher_webapi](https://hub.docker.com/r/avishayil/switcher_webapi)
