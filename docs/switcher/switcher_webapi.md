@@ -1,8 +1,8 @@
 ---
 layout: default
 title: WebAPI HA integration
-nav_order: 3
-has_children: false
+parent: Switcher
+nav_order: 2
 ---
 
 # WebAPI HA integration
