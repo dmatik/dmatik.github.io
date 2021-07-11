@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Switcher HA integration using WebAPI
-nav_order: 2
+nav_order: 3
 has_children: false
 permalink: /docs/switcher
 ---
