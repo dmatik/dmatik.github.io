@@ -3,7 +3,6 @@ layout: default
 title: Discover Switcher Devices Info
 nav_order: 2
 has_children: false
-permalink: /docs/switcher
 ---
 
 # Discover Switcher Devices Info
