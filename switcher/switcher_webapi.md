@@ -37,3 +37,24 @@ switcher_webapi:
 
 > If you are using ARM system, like PRI, please use the below image.    
 > [https://hub.docker.com/r/avishayil/switcher_webapi](https://hub.docker.com/r/avishayil/switcher_webapi)
+
+### RESTful commands
+Define RESTful commands in HA, to be used in scripts.  
+> Change to your IP and port below.
+
+```YAML
+rest_command:
+
+  switcher_turn_on:
+    url: http://{{switcher_web_api_ip}}:{{switcher_web_api_port}}/switcher/turn_on?id={{switcher_device_id}}&ip={{switcher_ip}}
+    method: "POST"
+
+  switcher_turn_on_timer:
+    url: http://{{switcher_web_api_ip}}:{{switcher_web_api_port}}/switcher/turn_on?id={{switcher_device_id}}&ip={{switcher_ip}}
+    method: "POST"
+    payload: '{"minutes": "{{minutes}}"}'
+
+  switcher_turn_off:
+    url: http://{{switcher_web_api_ip}}:{{switcher_web_api_port}}/switcher/turn_off?id={{switcher_device_id}}&ip={{switcher_ip}}
+    method: "POST"
+```
