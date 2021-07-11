@@ -13,19 +13,5 @@ python discover_devices.py 30
 
 Should look like this:
 
-![cmd](switcher/images/discovery.png)
+![cmd](images/discovery.png)
 
-```
-C:\Downloads\HA\aioswitcher-dev\scripts>python discover_devices.py 5
-{   'auto_shutdown': '03:00:00',
-    'device_id': 'XXXXXX',
-    'device_state': <DeviceState.OFF: ('0000', 'off')>,
-    'device_type': <DeviceType.MINI: ('Switcher Mini', '0f', <DeviceCategory.WATER_HEATER: 1>)>,
-    'electric_current': 0.0,
-    'ip_address': 'X.X.X.X',
-    'last_data_update': datetime.datetime(2021, 7, 10, 19, 59, 22, 291648),
-    'mac_address': 'XX:XX:XX:XX:XX:XX',
-    'name': 'Switcher Mini 3472',
-    'power_consumption': 0,
-    'remaining_time': '00:00:00'}
-```
