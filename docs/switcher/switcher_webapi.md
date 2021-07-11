@@ -2,7 +2,7 @@
 layout: default
 title: WebAPI HA Integration
 parent: Switcher
-nav_order: 2
+nav_order: 3
 ---
 
 # WebAPI HA Integration
