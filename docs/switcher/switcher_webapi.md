@@ -48,7 +48,7 @@ switcher_webapi:
 Define RESTful commands in HA, to be used in scripts.  
 
 {% raw %}
-```YAML
+```yaml
 rest_command:
 
   switcher_turn_on:
@@ -71,7 +71,7 @@ Define RESTful Sensor and other Template sensors depending on it in HA.
 > Change to your WebAPI IP, Device ID, Switcher IP and port below.
 
 {% raw %}
-```YAML
+```yaml
 sensor:
       - platform: rest
         resource: http://<<WEB_API_IP>>:8000/switcher/get_state?id=<<DEVICE_ID>>&ip=<<SWITCHER_IP>>
@@ -142,7 +142,7 @@ sensor:
 ### Input Select
 Define Input Select in HA, to select the timings for the Turn On with timer script.
 
-```YAML
+```yaml
 input_select:
       switcher_timer_minutes_input_select:
           name: Timer minutes
@@ -157,7 +157,7 @@ input_select:
 Define scripts in HA for turning on the Switcher, with and without timers, and turning it off.
 
 {% raw %}
-```YAML
+```yaml
 script:
       switcher_turn_on_timer_script:
           alias: On with Timer
@@ -202,7 +202,7 @@ script:
 Define Switch in HA, which uses the sensor and scripts we defined before.
 
 {% raw %}
-```YAML
+```yaml
 switch:
       - platform: template
         switches:
