@@ -28,7 +28,7 @@ In this solution we will be using [**Switcher WebAPI**](https://github.com/Tomer
 Setup Switcher WebAPI container in docker using its the [documentation](https://switcher-webapi.tomfi.info).  
 This is example of working Docker Compose (change to your values):
 
-```YAML
+```yaml
 switcher_webapi:
   image: tomerfi/switcher_webapi:latest
   container_name: switcher_webapi
@@ -41,7 +41,7 @@ switcher_webapi:
     TZ: "Asia/Jerusalem" 
 ```
 
-> If you are using ARM system, like PRI, please use the below image.    
+> If you are using ARM system, like RPI, please use the below image.    
 > [https://hub.docker.com/r/avishayil/switcher_webapi](https://hub.docker.com/r/avishayil/switcher_webapi)
 
 ### RESTful commands
