@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Switcher Discovery
-nav_order: 2
-has_children: false
+parent: Switcher
+nav_order: 1
 ---
 
 # Switcher Discovery
