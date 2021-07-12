@@ -5,7 +5,7 @@ parent: Switcher
 nav_order: 1
 ---
 
-# Switcher Discovery
+# Switcher Discovery    
        
        
 1. Install latest Python (Currently 3.9).
