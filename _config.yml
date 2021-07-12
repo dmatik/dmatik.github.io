@@ -3,14 +3,6 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-include:
-  - CONTRIBUTING.md
-  - README.md
-  - LICENSE.md
-  - COPYING.md
-  - CODE_OF_CONDUCT.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
   
 #remote_theme: chrisrhymes/bulma-clean-theme
 #remote_theme: aterenin/minima-reboot
@@ -24,7 +16,7 @@ baseurl: "/"
 url: "https://dmatik.github.io"
 
 permalink: pretty
-exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "Rakefile"
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "README.md", "LICENSE.txt", "lib/", "bin/", "Rakefile"
 , "docs/tests/"
 ]
 

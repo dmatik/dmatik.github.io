@@ -1,11 +1,4 @@
----
-layout: default
-title: Home
-nav_order: 1
-description: "Smart Home Tutorials"
-permalink: /
----
 
-# Tutorials
-Smart Home Tutorials
-{: .fs-6 .fw-300 }
+# Smart Home Tutorials
+
+[https://dmatik.github.io/](https://dmatik.github.io/)
