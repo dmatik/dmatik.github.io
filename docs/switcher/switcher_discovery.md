@@ -6,7 +6,8 @@ nav_order: 1
 ---
 
 # Switcher Discovery
-   
+       
+       
 1. Install latest Python (Currently 3.9).
 2. Install "aioswitcher" module with the below command.
 ```
