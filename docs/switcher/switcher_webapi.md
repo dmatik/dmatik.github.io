@@ -41,8 +41,7 @@ switcher_webapi:
     TZ: "Asia/Jerusalem" 
 ```
 
-> If you are using ARM system, like RPI, please use the below image.    
-> [https://hub.docker.com/r/avishayil/switcher_webapi](https://hub.docker.com/r/avishayil/switcher_webapi)
+> Also supports ARM systems, like RPI.
 
 ### RESTful commands
 Define RESTful commands in HA, to be used in scripts.  
