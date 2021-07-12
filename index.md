@@ -4,7 +4,6 @@ title: Home
 nav_order: 1
 description: "Smart Home Tutorials"
 permalink: /
-nav_exclude: true
 ---
 
 # Smart Home Tutorials
