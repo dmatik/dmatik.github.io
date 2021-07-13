@@ -9,6 +9,7 @@ permalink: /docs
  
 Node.js RESTful API to retrieve Israeli [Pikud Ha-Oref](https://www.oref.org.il/) so called "Red Color" alerts. <br/>
 The project deployed on Docker Hub as [dmatik/oref-alerts](https://hub.docker.com/r/dmatik/oref-alerts).
+The source code is on [Github](https://github.com/dmatik/orefAlerts/).
 
 ## Usage
 ### Run from hub
@@ -65,4 +66,60 @@ services:
         }
     ]
 }
+```
+
+### Home-Assistant
+
+#### Sensors
+##### Fetch the current alert
+```yaml
+sensor:
+  - platform: rest
+    resource: http://[YOUR_IP]:49000/current
+    name: redalert
+    value_template: 'OK'
+    json_attributes:
+      - alert
+      - current
+    scan_interval: 5
+    timeout: 30
+```
+
+##### Fetch the last day history alerts
+> **_NOTE:_** This responce is very long, while there is 255 characters limit in HA sensors. <br/>
+> Hence adding it to the attribute, which does not have such limit.
+```yaml
+sensor:
+  - platform: rest
+    resource: http://[YOUR_IP]:49000/last_day
+    name: redalert_history
+    value_template: 'OK'
+    json_attributes:
+      - "lastDay"
+    scan_interval: 120
+    timeout: 30
+```
+
+#### Binary Sensors
+##### Indicator for all alerts
+```yaml
+binary_sensor:
+  - platform: template
+    sensors:
+      redalert_all:
+        friendly_name: "Redalert All"
+        value_template: >-
+          {{ state_attr('sensor.redalert', 'alert') == "true" }}
+```
+
+##### Indicator for specific alert
+```yaml
+binary_sensor:
+  - platform: template
+    sensors:
+      redalert_ashdod:
+        friendly_name: "Redalert Ashdod"
+        value_template: >-
+          {{ state_attr('sensor.redalert', 'alert') == "true" and 
+                    'אשדוד - יא,יב,טו,יז,מרינה' in state_attr('sensor.redalert', 'current')['data'] }}
 ```
