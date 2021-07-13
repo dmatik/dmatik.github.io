@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Switcher
+title: orefAlerts
 nav_order: 3
 permalink: /docs
 ---
