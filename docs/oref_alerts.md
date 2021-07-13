@@ -87,7 +87,8 @@ sensor:
 
 ##### Fetch the last day history alerts
 > **_NOTE:_** This responce is very long, while there is 255 characters limit in HA sensors. <br/>
-> Hence adding it to the attribute, which does not have such limit.
+> Hence adding it to the attribute, which does not have such limit.   
+
 ```yaml
 sensor:
   - platform: rest
