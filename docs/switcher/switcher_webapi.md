@@ -73,7 +73,7 @@ Define RESTful Sensor and other Template sensors depending on it in HA.
 ```yaml
 sensor:
       - platform: rest
-        resource: http://<<WEB_API_IP>>:8000/switcher/get_state?id=<<DEVICE_ID>>&ip=<<SWITCHER_IP>>
+        resource: http://[YOUR_WEB_API_IP]:8000/switcher/get_state?id=[YOUR_DEVICE_ID]&ip=[YOUR_SWITCHER_IP]
         name: Switcher WebAPI
         json_attributes:
           - state
@@ -163,10 +163,10 @@ script:
           sequence:
               - service: rest_command.switcher_turn_on_timer
                 data_template:
-                  switcher_web_api_ip: <<WEB_API_IP>>
+                  switcher_web_api_ip: [YOUR_WEB_API_IP]
                   switcher_web_api_port: 8000
-                  switcher_device_id: <<DEVICE_ID>>
-                  switcher_ip: <<SWITCHER_IP>>
+                  switcher_device_id: [YOUR_DEVICE_ID]
+                  switcher_ip: [YOUR_SWITCHER_IP]
                   minutes: '{{ states("input_select.switcher_timer_minutes_input_select") }}'
               - service: homeassistant.update_entity
                 entity_id: sensor.switcher_webapi
@@ -176,10 +176,10 @@ script:
           sequence:
               - service: rest_command.switcher_turn_on
                 data_template:
-                  switcher_web_api_ip: <<WEB_API_IP>>
+                  switcher_web_api_ip: [YOUR_WEB_API_IP]
                   switcher_web_api_port: 8000
-                  switcher_device_id: <<DEVICE_ID>>
-                  switcher_ip: <<SWITCHER_IP>>
+                  switcher_device_id: [YOUR_DEVICE_ID]
+                  switcher_ip: [YOUR_SWITCHER_IP]
               - service: homeassistant.update_entity
                 entity_id: sensor.switcher_webapi
 
@@ -188,10 +188,10 @@ script:
           sequence:
               - service: rest_command.switcher_turn_off
                 data_template:
-                  switcher_web_api_ip: <<WEB_API_IP>>
+                  switcher_web_api_ip: [YOUR_WEB_API_IP]
                   switcher_web_api_port: 8000
-                  switcher_device_id: <<DEVICE_ID>>
-                  switcher_ip: <<SWITCHER_IP>>
+                  switcher_device_id: [YOUR_DEVICE_ID]
+                  switcher_ip: [YOUR_SWITCHER_IP]
               - service: homeassistant.update_entity
                 entity_id: sensor.switcher_webapi
 ```
