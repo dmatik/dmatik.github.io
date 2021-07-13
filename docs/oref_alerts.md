@@ -102,6 +102,8 @@ sensor:
 
 #### Binary Sensors
 ##### Indicator for all alerts
+
+{% raw %}
 ```yaml
 binary_sensor:
   - platform: template
@@ -111,8 +113,11 @@ binary_sensor:
         value_template: >-
           {{ state_attr('sensor.redalert', 'alert') == "true" }}
 ```
+{% endraw %}
 
 ##### Indicator for specific alert
+
+{% raw %}
 ```yaml
 binary_sensor:
   - platform: template
@@ -123,3 +128,4 @@ binary_sensor:
           {{ state_attr('sensor.redalert', 'alert') == "true" and 
                     'אשדוד - יא,יב,טו,יז,מרינה' in state_attr('sensor.redalert', 'current')['data'] }}
 ```
+{% endraw %}
