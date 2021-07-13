@@ -2,7 +2,7 @@
 layout: default
 title: orefAlerts
 nav_order: 3
-permalink: /docs/oref_alerts.html
+permalink: /docs/oref_alerts
 ---
 
 # orefAlerts
