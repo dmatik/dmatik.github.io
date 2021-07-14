@@ -5,6 +5,8 @@ nav_order: 3
 permalink: /docs/oref_alerts
 ---
 
+![pikud_haoref](images/pikud_haoref.png)
+
 # orefAlerts
  
 Node.js RESTful API to retrieve Israeli [Pikud Ha-Oref](https://www.oref.org.il/) so called "Red Color" alerts. <br/>
