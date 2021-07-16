@@ -7,11 +7,13 @@ permalink: /docs/oref_alerts
 
 ![pikud_haoref](images/pikud_haoref.png)
 
-# orefAlerts
+# oref-alerts-proxy-ms
  
-Node.js RESTful API to retrieve Israeli [Pikud Ha-Oref](https://www.oref.org.il/) so called "Red Color" alerts. <br/>
+Java Spring Boot MS to retrieve Israeli [Pikud Ha-Oref](https://www.oref.org.il/) so called "Red Color" alerts. <br/>
 The project deployed on Docker Hub as [dmatik/oref-alerts](https://hub.docker.com/r/dmatik/oref-alerts).   
-The source code is on [Github](https://github.com/dmatik/orefAlerts/).
+The source code is on [Github](https://github.com/dmatik/oref-alerts-proxy-ms).
+<br><br>
+Latest stable Node.js release: dmatik/oref-alerts:v0.0.2
 
 ## Usage
 ### Run from hub
@@ -49,10 +51,10 @@ services:
     }
 }
 ```
-#### Example for /last_day endpoint
+#### Example for /history endpoint
 ```json
 {
-    "lastDay": [
+    "history": [
         {
             "data": "בטחה",
             "date": "17.05.2021",
@@ -93,11 +95,11 @@ sensor:
 ```yaml
 sensor:
   - platform: rest
-    resource: http://[YOUR_IP]:49000/last_day
+    resource: http://[YOUR_IP]:49000/history
     name: redalert_history
     value_template: 'OK'
     json_attributes:
-      - "lastDay"
+      - "history"
     scan_interval: 120
     timeout: 30
 ```
