@@ -19,7 +19,7 @@ Latest stable Node.js release: dmatik/oref-alerts:v0.0.2
 ### Run from hub
 #### docker run from hub
 ```text
-docker run -d -p 49000:3000 --name oref-alerts dmatik/oref-alerts:latest
+docker run -d -p 49000:9001 --name oref-alerts dmatik/oref-alerts:latest
 ```
 
 #### docker-compose from hub
