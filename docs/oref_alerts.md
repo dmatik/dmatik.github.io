@@ -30,10 +30,13 @@ services:
         image: dmatik/oref-alerts:latest
         container_name: oref-alerts
         hostname: oref-alerts
+        restart: unless-stopped
         network_mode: "bridge"
         ports:
           - 49000:9001
-        restart: unless-stopped
+        environment:
+            TZ: "Asia/Jerusalem"
+            LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: "INFO"
 ```
 
 ### JSON Response Examples
